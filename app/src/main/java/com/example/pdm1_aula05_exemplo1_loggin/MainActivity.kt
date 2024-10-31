@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import android.util.Log
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,5 +74,37 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    companion object {const val TAG = "Prof. José Paulo - DEBUG_LIFE_CYCLE"}
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "método onStart() foi invocado!")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "método onRestart() foi invocado!")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "método onResume() foi invocado!")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "método onPause() foi invocado!")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "método onStop() foi invocado!")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "método onDestroy() foi invocado!")
     }
 }
